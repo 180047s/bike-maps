@@ -1,0 +1,14 @@
+<mat-form-field appearance="fill" class="mx-2">
+  <mat-label>Wybierz wariant map</mat-label>
+  <mat-select>
+    <mat-option (onSelectionChange)="onOptionChange($event)" *ngFor="let option of options" [value]="option.value">
+      {{ option.viewValue }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="onPreviousClick()" class="mx-2">
+  Poprzedni miesiąc
+</button>
+<button mat-raised-button color="primary" (click)="onNextClick()" class="mx-2">
+  Następny miesiąc
+</button>

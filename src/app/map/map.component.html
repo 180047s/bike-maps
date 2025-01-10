@@ -1,0 +1,18 @@
+<div class="container-fluid h-100 d-flex flex-column">
+  <div class="row">
+    <div class="text-center">
+      <h2>Mapa dla miesiąca: {{ month$ | async }}</h2>
+    </div>
+  </div>
+  <map-navigation></map-navigation>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center align-items-center">
+      <iframe
+        [src]="iframe$ | async"
+        class="border-0"
+        [height]="mapHeight"
+        style="width: 100%; max-width: 100%"
+      ></iframe>
+    </div>
+  </div>
+</div>
